@@ -9,13 +9,14 @@ const path = 'https://mercado.carrefour.com.br/api/checkout/pub/regions?country=
 
 const setHeaders = {
   method: 'GET',
-  headers: myHeaders,
   mode: 'no-cors'
 }
 
 function getLoja(loja) {
   return fetch(`${path}${loja}`, setHeaders)
     .then((response) => response.text())
+	.then(result => console.log(result))
+	.catch(error => console.log('error', error));
 }
 
 export default getLoja
