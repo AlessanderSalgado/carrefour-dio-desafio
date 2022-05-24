@@ -18,4 +18,4 @@ function getLoja(loja) {
     .then((response) => response.text())
 }
 
-export default { getLoja }
+export default getLoja
