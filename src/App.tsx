@@ -1,11 +1,16 @@
 import React from 'react';
 import './App.css';
+import Logo from './components/logo/logo';
+import Mostrar from './mostrar';
 
 function App() {
   return (
-    <div className="App">
-      Ola teste
+    <>
+    <Logo />
+    <div className="App">Dados aqui:
     </div>
+    <Mostrar />
+    </>
   );
 }
 

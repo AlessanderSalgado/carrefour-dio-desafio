@@ -1,0 +1,7 @@
+.logo{
+    display: block;
+    user-select: none;
+    margin: left;
+    background-color: hsl(0, 0%, 95%);
+    transition: background-color 300ms;
+}
