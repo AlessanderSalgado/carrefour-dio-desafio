@@ -1,17 +1,14 @@
 import React, { Component } from 'react';
-import apiCep from './api/apiCarrefour'
+import apiCep from './api/apiCarrefour';
 
 class App extends Component{
-
   state={
     lojas: [],
   }
 
   async componentDidMount(){
-    const response = await apiCep.get('');
+    const response = await apiCep.get('/api/checkout/pub/regions?country=BRA&postalCode=28921212');
     console.log(response.data)
-
-    this.setState({lojas: response.data})
   }
 
   render(){

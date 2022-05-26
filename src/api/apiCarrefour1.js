@@ -1,21 +1,17 @@
-var myHeaders = new Headers();
-myHeaders.append("X-VTEX-API-AppKey", "vtexappkey-carrefourbr-PZLYPS");
-myHeaders.append("X-VTEX-API-AppToken", "UTARJONVBFAYJEOZGNAUZIRIFLMBNUVOOLWNTLIORNRCMGSIVEQFCTNNYOXYGHPUYEVLDHUVPKUHHBDOZPBKMOKGRITGDBXVQBDESIDQJWDANEZSIQVGSCZVEVPLCJVC");
-myHeaders.append("Content-Type", "application/json");
-myHeaders.append("Cookie", "_abck=64DE2E2C6B9A61A90B74C305456531F1~-1~YAAQNn/NF6XCStyAAQAAe+KE7Qfkdq87oh9SbSO1fFlKQa+ur6NbTnUvQ1vky2XKX/pwI39NSV19gRf4VcEJoL9WB7KDtndY4m3ALnpN/ZIfQ5f8+oJLZu4JZATFKhiw+J12TqLkVAcgphAZvW4yEAxgff4n5B9s0xmqTh6H2408NEtS/otPYsuXtPaOhctdb1mE14gn838V0OQJglsBhsi7ln7Q/QKHxT81i0O805Mbpz/gn2A6F1si/BXOsd6BYYG5k+aZUBNH5oLbok6vc2UHaQuPSch2GQi6d/jb0tJNLf1FdfXc/xURHA7j3PFamb81PBPGDH+AvsewCI8iwHqMLe9IybwgdwI1jYchTTn2/8siM3HOcCGzo5js4d0=~-1~-1~-1");
 
-var graphql = JSON.stringify({
-	query: "",
-	variables: {}
-})
-var requestOptions = {
-	method: 'GET',
-	headers: myHeaders,
-	body: graphql,
-	redirect: 'follow'
-};
+var invocation = new XMLHttpRequest();
+var url = 'https://mercado.carrefour.com.br/api/checkout/pub/regions?country=BRA&postalCode=28921212';
 
-fetch("https://mercado.carrefour.com.br/api/checkout/pub/regions?country=BRA&postalCode=28921212", requestOptions)
-	.then(response => response.text())
-	.then(result => console.log(result))
-	.catch(error => console.log('error', error));
+function api(){
+  if(invocation) {
+    invocation.open('GET', url, true);
+    invocation.setRequestHeader("X-VTEX-API-AppKey","vtexappkey-carrefourbr-PZLYPS")
+    invocation.setRequestHeader("X-VTEX-API-AppToken","UTARJONVBFAYJEOZGNAUZIRIFLMBNUVOOLWNTLIORNRCMGSIVEQFCTNNYOXYGHPUYEVLDHUVPKUHHBDOZPBKMOKGRITGDBXVQBDESIDQJWDANEZSIQVGSCZVEVPLCJVC")
+    invocation.setRequestHeader("Access-Control-Allow-Origin","*")
+    invocation.setRequestHeader("mode","cors")
+    invocation.send();
+    var teste = invocation.getAllResponseHeaders()
+    console.log(teste)
+  }
+}
+export default api
