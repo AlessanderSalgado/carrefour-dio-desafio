@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/carrefour-dio-desafio/static/js/main.ff99f1c2.js",
+    "main.js": "/carrefour-dio-desafio/static/js/main.2810dcb6.js",
     "index.html": "/carrefour-dio-desafio/index.html",
-    "main.ff99f1c2.js.map": "/carrefour-dio-desafio/static/js/main.ff99f1c2.js.map"
+    "main.2810dcb6.js.map": "/carrefour-dio-desafio/static/js/main.2810dcb6.js.map"
   },
   "entrypoints": [
-    "static/js/main.ff99f1c2.js"
+    "static/js/main.2810dcb6.js"
   ]
 }
