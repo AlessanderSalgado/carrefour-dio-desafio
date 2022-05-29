@@ -1,4 +1,3 @@
-
 var invocation = new XMLHttpRequest();
 var url = 'https://mercado.carrefour.com.br/api/checkout/pub/regions?country=BRA&postalCode=28921212';
 
@@ -10,8 +9,6 @@ function api(){
     invocation.setRequestHeader("Access-Control-Allow-Origin","*")
     invocation.setRequestHeader("mode","cors")
     invocation.send();
-    var teste = invocation.getAllResponseHeaders()
-    console.log(teste)
   }
 }
 export default api

@@ -1,21 +1,16 @@
-import React, { Component } from 'react';
+import React, { Component, useState } from 'react';
 import apiCep from './api/apiCarrefour';
+import Logo from './components/logo/logo';
 
 class App extends Component{
-  state={
-    lojas: [],
-  }
-
-  async componentDidMount(){
-    const response = await apiCep.get('/api/checkout/pub/regions?country=BRA&postalCode=28921212');
-    console.log(response.data)
-  }
-
   render(){
     return(
+      <>
+      <Logo />
       <div>
         <h1>Lojas Proximas:</h1>
       </div>
+      </>
     );
   };
 };
