@@ -1,20 +1,19 @@
-import React, { Component, useState } from 'react';
-import apiCep from './api/apiCarrefour';
-import Logo from './components/logo/logo';
-import ModalListLojas from './components/modal/modalLojas';
+import React,{useState} from 'react'
+import Logo from './component/logo/logo'
+import Modal from './component/modal/Modal'
+import './App.css';
 
-function App () {
+function App() {
   const [modal, setModal] = useState(true)
-    return (
-      <>
+  return (
+    <>
       <Logo />
       <div>
-        <h1>Lojas Proximas:</h1>
-        <ModalListLojas isOpen={modal} onClickClose={()=>setModal(false)}>
-        </ModalListLojas>
+        <Modal isOpen={modal} onClickClose={()=>setModal(false)}>
+        </Modal>
       </div>
       </>
-    );
-};
+  );
+}
 
 export default App;
