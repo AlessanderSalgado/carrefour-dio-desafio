@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import ReactDOM from 'react-dom';
 import './Modal.css'
 import conect from '../api/conect'
@@ -17,9 +17,9 @@ const ModalListLojas = ({children, isOpen, onClickClose}) => {
             await conect.get(`/api/checkout/pub/regions?country=BRA&postalCode=${cep}`)
             .then((response)=>{
                 response.data.forEach((valor)=>{
-                    valor.sellers.map((valora)=>{
+                    valor.sellers.map((valora)=>(
                         lojas.push(valora)
-                    })               
+                    ))               
                 })
                 onClickClose()
             }).catch((response)=>{
