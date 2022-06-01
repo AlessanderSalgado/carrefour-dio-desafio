@@ -56,7 +56,7 @@ const ModalListLojas = ({children, isOpen, onClickClose}) => {
                         <input className='input-class' type='text' id='value-busca' placeholder="00000-000" required/>
                         <button className='bnt-class-buscar button button:hover' type='button' onClick={BuscaLojas}>Buscar</button>
                     </form>
-                    <a href="https://buscacepinter.correios.com.br/app/endereco/index.php?t" target="_blank" rel="noopener" className='ahref-clas'>Não sei o CEP</a>
+                    <a href="https://buscacepinter.correios.com.br/app/endereco/index.php?t" target="_blank" rel="noreferrer" className='ahref-clas'>Não sei o CEP</a>
                 {children}
                 </div>
                 <div className='div-class-retorno-busca'>
