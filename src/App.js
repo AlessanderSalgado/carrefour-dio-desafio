@@ -1,7 +1,6 @@
 import React,{useState} from 'react'
 import Logo from './component/logo/logo'
 import Modal from './component/modal/Modal'
-import './App.css';
 
 function App() {
   const [modal, setModal] = useState(true)
