@@ -21,10 +21,6 @@
     width: auto;
     height: 30px;
 }
-
-/*@media screen and (min-width: 40em){
-    flex-direction: row;
-}*/
 .div-class-menu-busca{
     margin-top: 10px;
     min-width: 0px;
