@@ -23,7 +23,7 @@ const ModalListLojas = ({children, isOpen, onClickClose}) => {
                 })
                 onClickClose()
             }).catch((response)=>{
-                //console.log(response)
+                console.log(response)
                 setDivret(<div className='div-class-retorno-cep-vazio'>CEP inválido. Digite novamente.</div>)
             })
         }
