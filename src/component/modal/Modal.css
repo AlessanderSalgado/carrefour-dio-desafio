@@ -1,7 +1,7 @@
 .div-class-externa-fundo-transparente{
     float: none;
     padding: 10px;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     bottom: 0;
@@ -149,19 +149,19 @@
     text-align: center;
     text-decoration: underline;
     transition: opacity 0.3s ease 0s;
-  }
-  .div-class-retorno-busca{
+}
+.div-class-retorno-busca{
     width: auto;
     height: 50px;
     display: flex;
     flex: 10 0 0%;
     font-size: 14px;
-  }
-  .div-class-retorno-cep-vazio{
+}
+.div-class-retorno-cep-vazio{
     box-sizing: border-box;
     min-width: 0px;
     width: 100%;
     margin: 6px 35px;
     color: rgb(255, 76, 76);
     display: flex;
-  }
+}
