@@ -1,19 +1,19 @@
-import React from 'react';
+import React, {useState,useEffect} from 'react';
 //import ReactDOM from 'react-dom';
 import conect from '../api/conect';
 
-function ListarProdutos({children}){
-    //const [lista, setLista] = useState([])
-    const lista =[]
-    if(!lista.length){
-        alert('estou vazio')
-        ListaGeral()
-    }else{
-        //alert('estou carregado')
-    }
-    //useEffect(()=>{
-    //    console.log('atualizei')
-    //},[lista])
+function ListarProdutos({isOpen, children}){
+    const [lista, setLista] = useState([])
+
+    useEffect(()=>{
+        console.log('atualizei')
+        if(!lista.length){
+            //alert('estou vazio')
+            ListaGeral()
+        }else{
+            //alert('estou carregado')
+        }
+    },[lista])
 
     async function ListaGeral(){
         console.log('listar produtos')
@@ -21,8 +21,8 @@ function ListarProdutos({children}){
             .then((response)=>{
                 response.data.forEach((valor)=>{
                     //console.log('Init proc')
-                    lista.push(valor)
-                    //console.log('Fim proc')
+                    setLista(valor)
+                    console.log(valor)
                     //valor.sellers.map((valora)=>(
                     //    lista.push(valora)
                     //))               
