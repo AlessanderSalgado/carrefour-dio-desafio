@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 //import ReactDOM from 'react-dom';
 import conect from '../api/conect';
 
@@ -11,9 +11,9 @@ function ListarProdutos({children}){
     }else{
         //alert('estou carregado')
     }
-    useEffect(()=>{
-        console.log('atualizei')
-    },[lista])
+    //useEffect(()=>{
+    //    console.log('atualizei')
+    //},[lista])
 
     async function ListaGeral(){
         console.log('listar produtos')
