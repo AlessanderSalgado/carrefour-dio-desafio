@@ -2,10 +2,11 @@ import React, {useEffect, useState} from 'react';
 //import ReactDOM from 'react-dom';
 import conect from '../api/conect';
 
-const ListarProdutos = ({children}) =>{
-    const [lista, setLista] = useState([])
+function ListarProdutos({children}){
+    //const [lista, setLista] = useState([])
+    const lista =[]
     if(!lista.length){
-        //alert('estou vazio')
+        alert('estou vazio')
         ListaGeral()
     }else{
         //alert('estou carregado')
@@ -15,18 +16,19 @@ const ListarProdutos = ({children}) =>{
     },[lista])
 
     async function ListaGeral(){
+        console.log('listar produtos')
         await conect.get(`/api/catalog_system/pub/products/search?fq=`)
             .then((response)=>{
                 response.data.forEach((valor)=>{
-                    console.log('Init proc')
-                    setLista(valor)
-                    console.log('Fim proc')
+                    //console.log('Init proc')
+                    lista.push(valor)
+                    //console.log('Fim proc')
                     //valor.sellers.map((valora)=>(
                     //    lista.push(valora)
                     //))               
                 })
             }).catch((response)=>{
-                console.log(response)
+                //console.log(response)
                 //setDivret(<div className='div-class-retorno-cep-vazio'>CEP inválido. Digite novamente.</div>)
             })
     }

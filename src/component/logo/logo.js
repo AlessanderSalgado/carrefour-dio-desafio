@@ -1,7 +1,7 @@
 import React from 'react';
 import './logo.css';
 
-function Logo() {
+function Logo({children}) {
   return (
     <>
       <div className='div-class-sombra sombra'>

@@ -3,15 +3,17 @@ import ListarProdutos from '../list_produtos/ListarProdutos';
 import Logo from '../logo/logo';
 
 
-const Painel = () =>{
+function Painel({children}){
 
     return(
         <>
             <div>
                 <Logo />
+                {children}
             </div>
             <div>
                 <ListarProdutos />
+                {children}
             </div>
         </>
     )

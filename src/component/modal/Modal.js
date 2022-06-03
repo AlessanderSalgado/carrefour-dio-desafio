@@ -14,16 +14,18 @@ const ModalListLojas = ({children, isOpen, onClickClose}) => {
             setDivret(<div className='div-class-retorno-cep-vazio'>CEP inválido. Digite novamente.</div>)
         }else{
             setDivret(<div className='div-class-retorno-cep-vazio'>Busacando.....</div>)
+            console.log('buca cep')
             await conect.get(`/api/checkout/pub/regions?country=BRA&postalCode=${cep}`)
             .then((response)=>{
                 response.data.forEach((valor)=>{
                     valor.sellers.map((valora)=>(
                         lojas.push(valora)
+                        
                     ))               
                 })
                 onClickClose()
             }).catch((response)=>{
-                console.log(response)
+                //console.log(response)
                 setDivret(<div className='div-class-retorno-cep-vazio'>CEP inválido. Digite novamente.</div>)
             })
         }
