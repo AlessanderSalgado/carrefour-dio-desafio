@@ -1,3 +1,22 @@
+# Projeto Desafio de código Carrefour.
+
+## `Objetivo:`
+### O objetivo deste projeto foi acessar uma Api com um cep valido para buscar as lojas da região, assim
+### Buscar os produtos das mesmas.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
