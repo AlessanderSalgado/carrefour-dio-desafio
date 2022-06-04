@@ -4,35 +4,36 @@ import './Modal.css'
 import conect from '../api/conect'
 const portalRoot = document.getElementById('portal-root');
 
-const ModalListLojas = ({children, isOpen, onClickClose}) => {
+const ModalListLojas = ({children, isOpen, onClickClose,lja}) => {
     const [divret, setDivret] = useState(<div className='div-class-retorno-cep-vazio'></div>)
-
+    
+    var lojas = []
     async function BuscaLojas(){
-        var lojas = []
         var cep = document.getElementById('value-busca').value
         if(cep === ''){
             setDivret(<div className='div-class-retorno-cep-vazio'>CEP inválido. Digite novamente.</div>)
         }else{
             setDivret(<div className='div-class-retorno-cep-vazio'>Busacando.....</div>)
-            console.log('buca cep')
+            //console.log('buca cep')
             await conect.get(`/api/checkout/pub/regions?country=BRA&postalCode=${cep}`)
             .then((response)=>{
                 response.data.forEach((valor)=>{
                     valor.sellers.map((valora)=>(
                         lojas.push(valora)
-                        
                     ))               
                 })
-                onClickClose()
             }).catch((response)=>{
                 //console.log(response)
                 setDivret(<div className='div-class-retorno-cep-vazio'>CEP inválido. Digite novamente.</div>)
             })
+            if(lojas.length >= 1){
+                return(
+                    lja(lojas),
+                    onClickClose()
+                )
+            }       
         }
-        console.log(lojas)
-        
     }
-    
     function RetTela(){
         return divret
     }
@@ -40,6 +41,7 @@ const ModalListLojas = ({children, isOpen, onClickClose}) => {
         return null;
     }
     return ReactDOM.createPortal(
+        <>
         <div className='div-class-externa-fundo-transparente'>
             <div className='div-class-painel-central'>
                 <div className='div-class-button-close-modal'>
@@ -66,7 +68,8 @@ const ModalListLojas = ({children, isOpen, onClickClose}) => {
                     {children}
                 </div>
             </div>
-        </div>,
+        </div>
+        </>,
         portalRoot,
     )
 }

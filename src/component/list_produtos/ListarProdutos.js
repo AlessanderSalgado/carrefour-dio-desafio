@@ -3,19 +3,24 @@ import useApi from '../api/useApi';
 import ListaProdutosTela from './List'
 import './ListarProdutos.css'
 
-function ListarProdutos({children}){
-    //const [lista, setLista] = useState([])
+
+function ListarProdutos({children,ljas}){
     const [search, setSearch] = useState('')
+    
     const [load, loadInfo] = useApi({
         method: 'get',
         url: 'https://95cca9b7-ec4b-4aaa-81ea-4c98fa2f155f.mock.pstmn.io/api/catalog_system/pub/products/search?fq=',
         //url: 'https://00411bbc-6601-43da-85b8-048b253b7f03.mock.pstmn.io/api/catalog_system/pub/products/search?fq=',
     });
-//fq=C:26&fq=carrefourbr1056
-    //console.log(loadInfo.data);
+    
     useEffect(()=>{
-        load();
-    },[])
+        if(ljas.length){
+            console.log('funcao busca por loja')
+        }else{
+            load();
+        }
+    // eslint-disable-next-line  
+    },[ljas])
 
     return (
     <div>
