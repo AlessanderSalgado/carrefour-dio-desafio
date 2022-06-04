@@ -3,8 +3,7 @@ import useApi from '../api/useApi';
 import ListaProdutosTela from './List'
 import './ListarProdutos.css'
 
-
-function ListarProdutos({children,ljas}){
+function ListarProdutos({children,ljas,onClickOpen,cep}){
     const [search, setSearch] = useState('')
     
     const [load, loadInfo] = useApi({
@@ -50,6 +49,15 @@ function ListarProdutos({children,ljas}){
           </div>
           <div>carrinho e outros</div>
         </div>
+      </div>
+      <div className='div-class-editar-cep'>
+          <div className='div-class-ret-cep'>
+              {cep}
+              </div>
+              <button className='bnt-class-editar-cep'
+              onClick={onClickOpen}>
+              Alterar
+          </button>
       </div>
         <div className='div-class-lista-card'>
             <ListaProdutosTela loading={loadInfo.loading} listaProd={loadInfo.data} error={loadInfo.error}>

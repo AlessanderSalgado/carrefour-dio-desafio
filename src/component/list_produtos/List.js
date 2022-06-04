@@ -1,11 +1,7 @@
 import React from "react";
 
-
-
 const ListaProdutosTela = ({loading, listaProd, error}) =>{
-//console.log(loading)
-//console.log(listaProd)
-//console.log(error)
+
 if(loading === true){
     return <div>Buscando dados..............</div>
 }
@@ -26,7 +22,6 @@ if(listaProd){
 if(error){
     return <div>Erro de conexao co API</div>
 }
-
 
 return(
     <>

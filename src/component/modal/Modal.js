@@ -4,7 +4,7 @@ import './Modal.css'
 import conect from '../api/conect'
 const portalRoot = document.getElementById('portal-root');
 
-const ModalListLojas = ({children, isOpen, onClickClose,lja}) => {
+const ModalListLojas = ({children, isOpen, onClickClose,lja,zipcode}) => {
     const [divret, setDivret] = useState(<div className='div-class-retorno-cep-vazio'></div>)
     
     var lojas = []
@@ -29,6 +29,7 @@ const ModalListLojas = ({children, isOpen, onClickClose,lja}) => {
             if(lojas.length >= 1){
                 return(
                     lja(lojas),
+                    zipcode(document.getElementById('value-busca').value),
                     onClickClose()
                 )
             }       
