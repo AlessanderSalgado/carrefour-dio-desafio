@@ -14,9 +14,22 @@ Adotei o react para este projeto porque acredito que faz parte do obejetivo do c
 
 ### `Premissa de Desenvolvimento`
 
-Peguei como base o site oficial, [wwww.mercado.carrefour.com.br](https://.mercado.carrefour.com.br), tentei recriar a parte em que colocamos o cep para buscar a região e os produtos atrelados a ela, e o consulta produtos tb.\ 
+Peguei como base o site oficial, [wwww.mercado.carrefour.com.br](https://.mercado.carrefour.com.br), tentei recriar a parte em que colocamos o cep para buscar a região e os produtos atrelados a ela, e o consultar produtos tb.
 
 ### `Link para o projeto funcionando:` [https://alessandersalgado.github.io/carrefour-dio-desafio/](https://alessandersalgado.github.io/carrefour-dio-desafio/)
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
