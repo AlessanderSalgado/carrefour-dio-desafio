@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/carrefour-dio-desafio/static/css/main.6cd8dbab.css",
-    "main.js": "/carrefour-dio-desafio/static/js/main.9b2906ab.js",
+    "main.css": "/carrefour-dio-desafio/static/css/main.8670b16e.css",
+    "main.js": "/carrefour-dio-desafio/static/js/main.2bdcf025.js",
     "index.html": "/carrefour-dio-desafio/index.html",
-    "main.6cd8dbab.css.map": "/carrefour-dio-desafio/static/css/main.6cd8dbab.css.map",
-    "main.9b2906ab.js.map": "/carrefour-dio-desafio/static/js/main.9b2906ab.js.map"
+    "main.8670b16e.css.map": "/carrefour-dio-desafio/static/css/main.8670b16e.css.map",
+    "main.2bdcf025.js.map": "/carrefour-dio-desafio/static/js/main.2bdcf025.js.map"
   },
   "entrypoints": [
-    "static/css/main.6cd8dbab.css",
-    "static/js/main.9b2906ab.js"
+    "static/css/main.8670b16e.css",
+    "static/js/main.2bdcf025.js"
   ]
 }
