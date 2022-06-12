@@ -1,5 +1,5 @@
 import React,{useState} from 'react';
-import ListarProdutos from '../list_produtos/ListarProdutos';
+import ListarProdutos from '../listaprodutos/ListarProdutos';
 import Modal from '../modal/Modal'
 
 
