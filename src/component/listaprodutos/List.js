@@ -20,7 +20,7 @@ if(listaProd){
     return <div>Nenhum Resultado encontrado.</div>
 }
 if(error){
-    return <div>Erro de conexao co API</div>
+    return <div>Erro de conexao com API</div>
 }
 
 return(

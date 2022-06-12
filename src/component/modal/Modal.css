@@ -1,3 +1,13 @@
+@media screen and (max-width: 700px){
+    .div-class-painel-central.central{
+        max-width: 70%;
+    }
+    .bnt-class.close{
+        right: 18%;
+        top: 9.0rem;
+    }
+}
+
 .div-class-externa-fundo-transparente{
     float: none;
     padding: 10px;
