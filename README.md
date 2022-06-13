@@ -25,7 +25,7 @@ Cep para testes:  28921212 e 01153000
 ### `Link para o projeto funcionando:` [https://alessandersalgado.github.io/carrefour-dio-desafio/](https://alessandersalgado.github.io/carrefour-dio-desafio/)
 
 
-
+### `Link do Video de explicacao do codigo:` [https://www.youtube.com/channel/UC7_2tc6JzgrRHvb3ddYJgPQ/featured](https://www.youtube.com/channel/UC7_2tc6JzgrRHvb3ddYJgPQ/featured)
 
 
 
