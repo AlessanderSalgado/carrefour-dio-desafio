@@ -1,7 +1,7 @@
 import React from "react";
 import Card from './Card'
 
-const ListaProdutosTela = ({loading, listaProd, error}) =>{
+const ListaProdutosTela = ({children, loading, listaProd, error}) =>{
 
 if(loading === true){
     return <div>Buscando dados..............</div>
@@ -9,7 +9,10 @@ if(loading === true){
 if(listaProd){   
     return(
         <div className="div-class-listaProd">
-            {listaProd.map((prod)=>(<Card prod={prod}/>))}
+            {listaProd.map((prod)=>(
+                <Card prod={prod}/>
+                ))}
+        {children}
         </div>
     )
 }else if(!listaProd){

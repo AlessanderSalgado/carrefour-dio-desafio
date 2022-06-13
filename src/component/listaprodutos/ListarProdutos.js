@@ -5,7 +5,7 @@ import './ListarProdutos.css'
 
 function ListarProdutos({children,ljas,onClickOpen,cep}){
     const [search, setSearch] = useState('')
-    
+
     const [load, loadInfo] = useApi({
         method: 'get',
         url: 'https://95cca9b7-ec4b-4aaa-81ea-4c98fa2f155f.mock.pstmn.io/api/catalog_system/pub/products/search?fq=C:26&fq=',
@@ -24,6 +24,7 @@ function ListarProdutos({children,ljas,onClickOpen,cep}){
     useEffect(()=>{
       if(search.length >= 4){
         console.log(search)
+        
       }
     // eslint-disable-next-line  
     },[search])
@@ -69,6 +70,7 @@ function ListarProdutos({children,ljas,onClickOpen,cep}){
         <div className='div-class-lista-card'>
             <ListaProdutosTela loading={loadInfo.loading} listaProd={loadInfo.data} error={loadInfo.error}>
             </ListaProdutosTela>
+        {children}
         </div>
     </div>)
 }
